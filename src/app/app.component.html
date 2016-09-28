@@ -1,0 +1,25 @@
+<h1>
+  {{title}}
+</h1>
+
+<div>
+  <app-output [input]="counter" (outputBack)="onBack($event)"></app-output>
+  {{counter}}
+</div>
+
+<hr />
+
+<input type="text" [(ngModel)]="color" />
+<select [(ngModel)]="color2">
+  <option *ngFor="let item of color_options" value ="{{item}}">{{item}}</option>
+</select>
+<p [highlight]="color"> Highlight Me </p>
+<p highlight> Highlight Me </p>
+<p highlight> Highlight Me </p>
+<p [highlight]="color2"> Highlight Me </p>
+<p highlight> Highlight Me </p>
+<p highlight> Highlight Me </p>
+
+<div [highlight]="color2" [color]="'green'" style="padding:20px">
+  <p> Highlight Me </p>
+</div>
